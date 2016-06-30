@@ -1,0 +1,12 @@
+<div class="tshirt-item">
+    <h3>{{tshirt.name}}</h3>
+    <img src="assets/images/{{tshirt.image}}" />
+    <div class="item-control">
+        <select class="form-control">
+            {{#each tshirt.options as |opt|}}
+            <option value="{{opt.value}}">{{opt.name}}</option>
+            {{/each}}
+        </select>
+        <button class="btn btn-info">Add to cart</button>
+    </div>
+</div>
