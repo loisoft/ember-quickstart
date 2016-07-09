@@ -6,12 +6,15 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-    this.route('scientists');
-    this.route('landing');
-    this.route('products', function() {
-        this.route('javascript');
-        this.route('detail');
-    });
+  this.route('scientists');
+  this.route('landing');
+  this.route('products', function() {
+      this.route('javascript');
+      this.route('product', {
+          path: ":id"
+      });
+  });
+  this.route('about');
 });
 
 export default Router;

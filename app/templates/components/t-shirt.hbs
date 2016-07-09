@@ -1,6 +1,8 @@
 <div class="tshirt-item">
-    <h3>{{tshirt.name}}</h3>
-    <img src="assets/images/{{tshirt.image}}" />
+    {{#link-to "products.product" tshirt.id}}
+        <h3>{{tshirt.name}}</h3>
+        <img src="assets/images/{{tshirt.image}}" />
+    {{/link-to}}
     <div class="item-control">
         <select class="form-control">
             {{#each tshirt.options as |opt|}}
